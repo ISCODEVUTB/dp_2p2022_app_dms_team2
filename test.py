@@ -74,6 +74,14 @@ class TestDms(unittest.TestCase):
         result = self.magazine_online.versioning()
         self.assertEqual(result, "Se ha creado nueva version de MagazineOnline")
 
+    def test_magazine_online_embebed(self):
+        result = self.magazine_online.embebed("example.com")
+        self.assertEqual(result, "Se embebio el documento en la web example.com")
+
+    def test_magazine_online_browser(self):
+        result = self.magazine_online.open_in_browser()
+        self.assertEqual(result, "Abriendo documento...")
+
     def test_magazine_pdf_publish(self):
         result = self.magazine_pdf.publish()
         self.assertEqual(result, "Publicando MagazinePdf")
