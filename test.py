@@ -1,5 +1,9 @@
 import unittest
 from book_pdf import BookPdf
+from book_factory import BookFactory
+from thesis_factory import ThesisFactory
+from scientist_factory import ScientistFactory
+from magazine_factory import MagazineFactory
 from book_online import BookOnline
 from magazine_pdf import MagazinePdf
 from magazine_online import MagazineOnline
@@ -10,6 +14,11 @@ from scientist_online import ScientistOnline
 from enumerations import Format
 
 class TestDms(unittest.TestCase):
+
+    book_factory = BookFactory()
+    magazine_factory = MagazineFactory()
+    thesis_factory = ThesisFactory()
+    scientist_factory = ScientistFactory()
 
     book_pdf = BookPdf(year=2022, authors=["Erick", "Maria"],edition="2",publisher="Editorial UTB", isbn = "93423529923", formats=[Format.DIGITAL], pages=340, title="My example", idioms=["es", "en"])
     book_online = BookOnline(year=2022, authors=["Erick", "Maria"],edition="2",publisher="Editorial UTB", isbn = "93423529923", formats=[Format.DIGITAL], pages=340, title="My example", idioms=["es", "en"])
@@ -143,6 +152,39 @@ class TestDms(unittest.TestCase):
     def test_scientist_pdf_versioning(self):
         result = self.scientist_pdf.versioning()
         self.assertEqual(result, "Se ha creado nueva version de ScientistPdf")
+
+
+    def test_book_factory_pdf(self):
+        result = self.book_factory.get_pdf()
+        self.assertIsInstance(result, BookPdf)
+
+    def test_book_factory_online(self):
+        result = self.book_factory.get_online()
+        self.assertIsInstance(result, BookOnline)
+
+    def test_magazine_factory_pdf(self):
+        result = self.magazine_factory.get_pdf()
+        self.assertIsInstance(result, MagazinePdf)
+
+    def test_magazine_factory_online(self):
+        result = self.magazine_factory.get_online()
+        self.assertIsInstance(result, MagazineOnline)
+
+    def test_thesis_factory_pdf(self):
+        result = self.thesis_factory.get_pdf()
+        self.assertIsInstance(result, ThesisPdf)
+
+    def test_thesis_factory_online(self):
+        result = self.thesis_factory.get_online()
+        self.assertIsInstance(result, ThesisOnline)
+
+    def test_scientist_factory_pdf(self):
+        result = self.scientist_factory.get_pdf()
+        self.assertIsInstance(result, ScientistPdf)
+
+    def test_scientist_factory_online(self):
+        result = self.scientist_factory.get_online()
+        self.assertIsInstance(result, ScientistOnline)
 
 
 if __name__ == '__main__':
