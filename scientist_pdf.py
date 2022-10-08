@@ -10,10 +10,10 @@ class ScientistPdf(DocumentPdf):
         self._doi = doi
 
     def publish(self):
-        return "Publicando MagazinePdf"
+        return "Publicando ScientistPdf"
     
     def discontinue(self):
-        return "MagazinePdf a sido descontinuado"
+        return "ScientistPdf a sido descontinuado"
 
     def versioning(self):
-        return "Se ha creado nueva version de MagazinePdf"
+        return "Se ha creado nueva version de ScientistPdf"
