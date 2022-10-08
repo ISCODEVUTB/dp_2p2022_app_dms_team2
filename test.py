@@ -37,6 +37,18 @@ class TestDms(unittest.TestCase):
         result = self.book_online.versioning()
         self.assertEqual(result, "Se ha creado nueva version de BookOnline")
 
+    def test_book_pdf_sign(self):
+        result = self.book_pdf.sign("2345783")
+        self.assertEqual(result, "Firmamos el pdf digitalment con la firma 2345783")
+
+    def test_book_pdf_watermark(self):
+        result = self.book_pdf.add_watermark("example")
+        self.assertEqual(result, "Se coloco la marca de agua example al pdf")
+
+    def test_book_pdf_compress(self):
+        result = self.book_pdf.compress("medium")
+        self.assertEqual(result, "se comprimio el pdf a calidad medium")
+
     def test_book_pdf_publish(self):
         result = self.book_pdf.publish()
         self.assertEqual(result, "Publicando BookPdf")
