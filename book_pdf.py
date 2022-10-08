@@ -9,11 +9,11 @@ class BookPdf(DocumentPdf):
         self._isbn = isbn
 
     
-    def publish():
+    def publish(self):
         return "Publicando BookPdf"
     
-    def discontinue():
+    def discontinue(self):
         return "BookPdf a sido descontinuado"
 
-    def versioning():
+    def versioning(self):
         return "Se ha creado nueva version de BookPdf"

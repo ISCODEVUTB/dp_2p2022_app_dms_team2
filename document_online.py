@@ -88,15 +88,15 @@ class DocumentOnline(ABC, IOnline):
         self._pages = pages
 
     @abstractmethod
-    def publish():
+    def publish(self):
         pass
     
     @abstractmethod
-    def discontinue():
+    def discontinue(self):
         pass
 
     @abstractmethod
-    def versioning():
+    def versioning(self):
         pass
 
     def embebed(self, web):

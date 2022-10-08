@@ -8,11 +8,11 @@ class ThesisOnline(DocumentOnline):
         super().__init__(year, authors, edition, publisher, formats, idioms, pages, title)
         self._university = university
 
-    def publish():
+    def publish(self):
         return "Publicando ThesisOnline"
     
-    def discontinue():
+    def discontinue(self):
         return "ThesisOnline a sido descontinuado"
 
-    def versioning():
+    def versioning(self):
         return "Se ha creado nueva version de ThesisOnline"

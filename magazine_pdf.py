@@ -8,11 +8,11 @@ class MagazinePdf(DocumentPdf):
         super().__init__(year, authors, edition, publisher, formats, idioms, pages, title)
         self._issn = issn
 
-    def publish():
+    def publish(self):
         return "Publicando MagazinePdf"
     
-    def discontinue():
+    def discontinue(self):
         return "MagazinePdf a sido descontinuado"
 
-    def versioning():
+    def versioning(self):
         return "Se ha creado nueva version de MagazinePdf"

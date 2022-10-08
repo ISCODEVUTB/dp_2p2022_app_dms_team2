@@ -88,15 +88,15 @@ class DocumentPdf(ABC, IPdf):
         self._pages = pages
 
     @abstractmethod
-    def publish():
+    def publish(self):
         pass
     
     @abstractmethod
-    def discontinue():
+    def discontinue(self):
         pass
 
     @abstractmethod
-    def versioning():
+    def versioning(self):
         pass
 
     def sign(self, sign: str):

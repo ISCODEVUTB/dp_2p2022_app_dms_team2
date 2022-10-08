@@ -8,11 +8,11 @@ class ThesisPdf(DocumentPdf):
         super().__init__(year, authors, edition, publisher, formats, idioms, pages, title)
         self._university = university
 
-    def publish():
+    def publish(self):
         return "Publicando ThesisPdf"
     
-    def discontinue():
+    def discontinue(self):
         return "ThesisPdf a sido descontinuado"
 
-    def versioning():
+    def versioning(self):
         return "Se ha creado nueva version de ThesisPdf"

@@ -8,11 +8,11 @@ class ScientistOnline(DocumentOnline):
         super().__init__(year, authors, edition, publisher, formats, idioms, pages, title)
         self._doi = doi
 
-    def publish():
+    def publish(self):
         return "Publicando ScientistOnline"
     
-    def discontinue():
+    def discontinue(self):
         return "ScientistOnline a sido descontinuado"
 
-    def versioning():
+    def versioning(self):
         return "Se ha creado nueva version de ScientistOnline"

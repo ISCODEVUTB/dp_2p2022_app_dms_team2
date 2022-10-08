@@ -8,11 +8,11 @@ class BookOnline(DocumentOnline):
         super().__init__(year, authors, edition, publisher, formats, idioms, pages, title)
         self._isbn = isbn
 
-    def publish():
+    def publish(self):
         return "Publicando BookOnline"
     
-    def discontinue():
+    def discontinue(self):
         return "BookOnline a sido descontinuado"
 
-    def versioning():
+    def versioning(self):
         return "Se ha creado nueva version de BookOnline"
